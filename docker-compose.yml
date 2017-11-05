@@ -1,5 +1,13 @@
 version: '3.3'
 services:
+    minio:
+        image: minio/minio:latest
+        ports: 
+            - 9000:9000
+        command: server /data
+        environment:
+            MINIO_ACCESS_KEY: IK8XNAH6XL1CZK6TBP93
+            MINIO_SECRET_KEY: Y+2i4Pqn8eu2kmliJNiGlvqXnti3BWyeR2Ra2Ugu
     db:
         image: postgres:10.0-alpine
         restart: always

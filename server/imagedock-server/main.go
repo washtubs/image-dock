@@ -1,6 +1,8 @@
 package main
 
-import "github.com/xenogt/imagedock"
+import (
+	"github.com/xenogt/imagedock"
+)
 
 func main() {
 	log := imagedock.GetLogger()

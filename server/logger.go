@@ -6,8 +6,10 @@ import (
 	logging "github.com/op/go-logging"
 )
 
+var log *logging.Logger = GetLogger()
+
 func GetLogger() *logging.Logger {
-	log := logging.MustGetLogger("imagedock")
+	newLogger := logging.MustGetLogger("imagedock")
 	logBackend := logging.NewLogBackend(os.Stderr, "", 0)
 	leveledLogBackend := logging.AddModuleLevel(logBackend)
 	leveledLogBackend.SetLevel(logging.DEBUG, "")
@@ -16,5 +18,5 @@ func GetLogger() *logging.Logger {
 	logging.SetFormatter(logging.MustStringFormatter(
 		`%{color}%{time:15:04:05.000} %{shortfunc} ▶ %{level:.4s} %{id:03x}%{color:reset} %{message}`,
 	))
-	return log
+	return newLogger
 }
