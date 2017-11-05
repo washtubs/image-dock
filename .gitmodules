@@ -1,0 +1,12 @@
+[submodule "server/vendor/github.com/minio/minio-go"]
+	path = server/vendor/github.com/minio/minio-go
+	url = https://github.com/minio/minio-go
+[submodule "server/vendor/github.com/go-ini/ini"]
+	path = server/vendor/github.com/go-ini/ini
+	url = https://github.com/go-ini/ini
+[submodule "server/vendor/github.com/minio/go-homedir"]
+	path = server/vendor/github.com/minio/go-homedir
+	url = https://github.com/minio/go-homedir
+[submodule "server/vendor/github.com/op/go-logging"]
+	path = server/vendor/github.com/op/go-logging
+	url = https://github.com/op/go-logging
